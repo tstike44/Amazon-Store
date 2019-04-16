@@ -21,7 +21,7 @@ PRIMARY KEY (item_id)
 
 -- setting starter items
 INSERT INTO products (item_id, product_name, department_name, customer_price, stock_quantity)
-VALUES ("0028", "Tide Detergent", "Household", "10.99", 15);
+VALUES ("5028", "Tide Detergent", "Household", "10.99", 15);
 
 INSERT INTO products (item_id, product_name, department_name, customer_price, stock_quantity)
 VALUES ("1005", "Lucky Charms", "Grocery", "6.99", 20);
@@ -30,7 +30,7 @@ INSERT INTO products (item_id, product_name, department_name, customer_price, st
 VALUES ("1080", "Peanut Butter", "Grocery", "7.99", 13);
 
 INSERT INTO products (item_id, product_name, department_name, customer_price, stock_quantity)
-VALUES ("0228", "Logitech Keyboard", "Elecronics", "89.99", 3);
+VALUES ("5228", "Logitech Keyboard", "Elecronics", "89.99", 3);
 
 INSERT INTO products (item_id, product_name, department_name, customer_price, stock_quantity)
 VALUES ("2042", "Ant Spray", "Household", "6.99", 8);
