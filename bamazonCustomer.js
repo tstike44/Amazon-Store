@@ -1,10 +1,10 @@
-//starts our connection
+//starts our connection 
 var mysql = require('mysql');
 var inquirer = require('inquirer');
-
+/*make sure connections are right for your system*/
 var connection = mysql.createConnection({
     host: 'localhost',
-
+    
     port: 8889,
 
     user: 'root',
