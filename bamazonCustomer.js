@@ -1,3 +1,4 @@
+//starts our connection
 var mysql = require('mysql');
 var inquirer = require('inquirer');
 
@@ -24,6 +25,7 @@ connection.connect(function (error) {
     showItems();
 });
 
+//displays the items to choose from an allows the user to input the item id and the amount that they want 
 function showItems() {
     connection.query("SELECT * FROM products", function (err, res) {
         if (err) throw err;
@@ -39,7 +41,7 @@ function showItems() {
     });
 
 };
-
+//picking item
 var itemSelect = function () {
     inquirer.prompt([{
         name: "itemId",
@@ -60,7 +62,7 @@ var itemSelect = function () {
                     selectedItem = res[i];
                 }
             }
-
+//if the quantity the customer chose is true? the function will return a message with the cost 
             if (selectedItem.stock_quantity > parseInt(answer.quantity)) {
                 connection.query(
                     "UPDATE products SET ? WHERE ?",
@@ -81,6 +83,7 @@ var itemSelect = function () {
                     }
                 );
             }
+            //or else it will return an error and the user will have to start over
             else {
                 console.log("We're sorry. We don't have enough in stock.");
             }
